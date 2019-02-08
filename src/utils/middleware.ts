@@ -1,18 +1,15 @@
-// tslint:disable:prefer-for-of
 import * as jwt from 'jsonwebtoken';
 import config from '../config/config';
 import utils from './Utils';
+import wording from '../config/wording'
 
 export default function authenticateBefore(target: any, key: any, descriptor: PropertyDescriptor) {
   descriptor = Object.getOwnPropertyDescriptor(target, key);
   const originalMethod = descriptor.value;
   descriptor.value = function() {
-
     const args = [];
     const status = { status: false, user: false };
-    for (let index = 0; index < arguments.length; index++) {
-      args.push(arguments[index]);
-    }
+    for (let index = 0; index < arguments.length; index++) args.push(arguments[index]);
     const req = args[0];
     const res = args[1];
     const token = req.body.token || req.headers['x-access-token'] || '';
@@ -31,7 +28,7 @@ export default function authenticateBefore(target: any, key: any, descriptor: Pr
         } else {
           res.status(401).json({
             success: false,
-            message: 'Unauthorized'
+            message: wording.unauthorized
           });
         }
       }

@@ -1,10 +1,10 @@
 import bcrypt = require('bcrypt-nodejs');
 import { Request, Response } from 'express';
-import config from '../config/config';
 import User from '../models/User';
 import authenticateBefore from '../utils/Middleware';
 import utils from '../utils/Utils';
 import AuthenticationController from './AuthenticationController';
+import wording from '../config/wording'
 
 export default class UserController {
   public authController = new AuthenticationController();
@@ -27,7 +27,7 @@ export default class UserController {
     if (status.user.role === 1 && req.params.userID !== status.user.id) {
       res.status(401).json({
         success: false,
-        message: 'Unauthorized'
+        message: wording.unauthorized
       });
     }
     const _id: string = req.params.userID;
@@ -77,7 +77,7 @@ export default class UserController {
     if (status.user.role === 1 && req.params.userID !== status.user.id) {
       res.status(401).json({
         success: false,
-        message: 'Unauthorized'
+        message: wording.unauthorized
       });
     }
     const _id: string = req.params.userID;
@@ -103,7 +103,7 @@ export default class UserController {
     if (status.user.role === 1 && req.params.userID !== status.user.id) {
       res.status(401).json({
         success: false,
-        message: 'Unauthorized'
+        message: wording.unauthorized
       });
     }
     const _id: string = req.params.userID;

@@ -1,5 +1,4 @@
 import bcrypt = require('bcrypt-nodejs');
-import config from '../config/config';
 import User from '../models/User';
 import utils from './Utils';
 

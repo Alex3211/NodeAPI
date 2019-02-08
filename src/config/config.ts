@@ -1,12 +1,3 @@
-const permissions = {
-  findAll: 9,
-  findOne: 1,
-  create: 9,
-  update: 1,
-  delete: 1,
-  authenticate: 0,
-};
-
 export default {
     secret: 'thisIsASecretKeyForParsingToken',
     database: 'mongodb://localhost/tes',
@@ -20,5 +11,12 @@ export default {
       username: 'admin',
       role: 9,
     },
-    permissions,
+    permissions: {
+      findAll: 9,
+      findOne: 1,
+      create: 9,
+      update: 1,
+      delete: 1,
+      authenticate: 0,
+    },
 };
