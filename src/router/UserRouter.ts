@@ -5,34 +5,22 @@ class UserRouter {
   public router: Router;
   public userRoutes: UserRouter;
   private userController: UserController;
+  private userRoutesConfig: object;
 
   constructor() {
     this.userController = new UserController();
     this.router = Router();
-    this.routes();
+    this.setRoutes();
   }
 
-  public routes() {
-    this.router.get('/', (req: Request, res: Response) =>
-      this.userController.findAll(req, res)
-    );
-    this.router.get('/:userID', (req: Request, res: Response) =>
-      this.userController.findOne(req, res)
-    );
-    this.router.post('/', (req: Request, res: Response) =>
-      this.userController.create(req, res)
-    );
-    this.router.put('/:userID', (req: Request, res: Response) =>
-      this.userController.update(req, res)
-    );
-    this.router.delete('/:userID', (req: Request, res: Response) =>
-      this.userController.delete(req, res)
-    );
+  public setRoutes() {
+    this.router
+      .get('/', (req: Request, res: Response) => this.userController.findAll(req, res))
+      .get('/:userID', (req: Request, res: Response) => this.userController.findOne(req, res))
+      .post('/', (req: Request, res: Response) => this.userController.create(req, res))
+      .put('/:userID', (req: Request, res: Response) => this.userController.update(req, res))
+      .delete('/:userID', (req: Request, res: Response) => this.userController.delete(req, res));
   }
-
 }
 
-this.userRoutes = new UserRouter();
-this.userRoutes.routes();
-
-export default this.userRoutes.router;
+export default new UserRouter().router;
