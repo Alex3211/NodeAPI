@@ -7,8 +7,7 @@
     "dev": "tsc-watch --onSuccess \"node ./build/index.js\"",
     "build": "tsc",
     "start": "node ./build/index.js",
-    "ts:watch": "tsc -w",
-    "heroku-postbuild": "tsc"
+    "ts:watch": "tsc -w"
   },
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
@@ -40,6 +39,5 @@
     "nodemon": "1.14.7",
     "tsc-watch": "^1.0.22",
     "tslint": "5.8.0"
-  },
-  "heroku-run-build-script": true
+  }
 }
