@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsc-watch --onSuccess \"node ./build/index.js\"",
     "build": "tsc",
-    "start": "tsc && node ./build/index.js",
+    "start": "node ./build/index.js",
     "ts:watch": "tsc -w"
   },
   "dependencies": {
@@ -21,7 +21,8 @@
     "jsonwebtoken": "^5.7.0",
     "mongoose": "^5.4.11",
     "morgan": "^1.9.1",
-    "validator": "^10.11.0"
+    "validator": "^10.11.0",
+    "typescript": "2.6.2"
   },
   "devDependencies": {
     "@types/validator": "^10.9.0",
@@ -37,7 +38,6 @@
     "@types/node": "8.5.5",
     "nodemon": "1.14.7",
     "tsc-watch": "^1.0.22",
-    "tslint": "5.8.0",
-    "typescript": "2.6.2"
+    "tslint": "5.8.0"
   }
 }
