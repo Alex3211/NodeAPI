@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsc-watch --onSuccess \"node ./build/index.js\"",
+    "build": "tsc",
     "start": "node ./build/index.js",
     "ts:watch": "tsc -w"
   },
