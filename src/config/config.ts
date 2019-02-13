@@ -1,7 +1,7 @@
 export default {
     secret: 'thisIsASecretKeyForParsingToken',
     database: 'mongodb://localhost/tes',
-    port: 3000,
+    port: 8081,
     api_url: '/api/v1/',
     defaultUser: {
       email: 'admin@admin.admin',
