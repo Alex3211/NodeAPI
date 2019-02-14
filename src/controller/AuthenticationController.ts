@@ -1,7 +1,7 @@
 import bcrypt = require('bcrypt-nodejs');
 import { Request, Response } from 'express';
 import * as jwt from 'jsonwebtoken';
-import wording from '../config/wording';
+import wording from '../config/Word';
 import User from '../models/User';
 import utils from '../utils/Utils';
 

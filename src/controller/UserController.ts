@@ -1,9 +1,9 @@
 import bcrypt = require('bcrypt-nodejs');
 import { Request, Response } from 'express';
-import config from '../config/config';
-import wording from '../config/wording';
+import config from '../config';
+import wording from '../config/Word';
+import authenticateBefore from '../middleware/Authenticate';
 import User from '../models/User';
-import authenticateBefore from '../utils/middleware';
 import utils from '../utils/Utils';
 import AuthenticationController from './AuthenticationController';
 

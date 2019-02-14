@@ -1,7 +1,7 @@
 import * as jwt from 'jsonwebtoken';
-import config from '../config/config';
-import wording from '../config/wording';
-import utils from './Utils';
+import config from '../config';
+import wording from '../config/Word';
+import utils from '../utils/Utils';
 
 export default function authenticateBefore(target: any, key: any, descriptor: PropertyDescriptor) {
   descriptor = Object.getOwnPropertyDescriptor(target, key);
