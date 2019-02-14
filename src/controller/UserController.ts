@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import config from '../config/config';
 import wording from '../config/wording';
 import User from '../models/User';
-import authenticateBefore from '../utils/Middleware';
+import authenticateBefore from '../utils/middleware';
 import utils from '../utils/Utils';
 import AuthenticationController from './AuthenticationController';
 
