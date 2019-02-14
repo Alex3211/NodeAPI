@@ -1,5 +1,5 @@
 import { Request, Response, Router } from 'express';
-import UserController from '../controller/userController';
+import UserController from '../controller/UserController';
 
 class UserRouter {
   public router: Router;

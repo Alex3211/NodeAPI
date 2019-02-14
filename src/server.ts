@@ -7,7 +7,7 @@ import cors = require('cors');
 import express = require('express');
 import * as helmet from 'helmet';
 import logger = require('morgan');
-import AuthenticateRouter from './router/AuthenticateRouter';
+import AuthenticateRouter from './router/authenticateRouter';
 import UserRouter from './router/UserRouter';
 import Mongo from './utils/Mongo';
 import Seeder from './utils/Seeder';
