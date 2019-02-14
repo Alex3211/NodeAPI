@@ -1,6 +1,6 @@
 import bcrypt = require('bcrypt-nodejs');
 import { Request, Response } from 'express';
-import config from '../config';
+import config from '../config/Index';
 import wording from '../config/Word';
 import authenticateBefore from '../middleware/Authenticate';
 import User from '../models/User';

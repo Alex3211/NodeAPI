@@ -1,5 +1,5 @@
 import validator = require('validator');
-import config from '../config';
+import config from '../config/Index';
 
 export default {
   log: (stringToShow: string) => `${new Date().toLocaleString('fr-FR', { timeZone: 'UTC' })}: ${stringToShow}`,

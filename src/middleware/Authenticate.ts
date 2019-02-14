@@ -1,5 +1,5 @@
 import * as jwt from 'jsonwebtoken';
-import config from '../config';
+import config from '../config/Index';
 import wording from '../config/Word';
 import utils from '../utils/Utils';
 
